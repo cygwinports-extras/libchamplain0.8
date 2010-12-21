@@ -1,0 +1,22 @@
+ORIG_PN="libchamplain"
+inherit gnome2
+
+DESCRIPTION="Clutter-based map display library and GTK+ widget"
+HOMEPAGE="http://projects.gnome.org/libchamplain/"
+
+PKG_NAMES="libchamplain0.8_1 libchamplain0.8-devel
+           libchamplain-gtk0.8_1 libchamplain-gtk0.8-devel
+           girepository-Champlain0.8 girepository-GtkChamplain0.8
+           vala-champlain0.8 vala-champlain-gtk0.8"
+libchamplain0_8_1_CONTENTS="usr/bin/cygchamplain-0.8-1.dll usr/share/doc/"
+libchamplain0_8_devel_CONTENTS="--exclude=*-gtk* usr/include/ usr/lib/lib*
+                                usr/lib/pkgconfig/ usr/share/gtk-doc/html/libchamplain/"
+libchamplain_gtk0_8_1_CONTENTS="usr/bin/cygchamplain-gtk-0.8-1.dll"
+libchamplain_gtk0_8_devel_CONTENTS="usr/include/libchamplain-gtk-0.8/ usr/lib/libchamplain-gtk-0.8.*
+                                    usr/lib/pkgconfig/champlain-gtk-0.8.pc usr/share/gtk-doc/html/libchamplain-gtk/"
+girepository_Champlain0_8_CONTENTS="usr/*/gir*/Champlain-0.8.*"
+girepository_GtkChamplain0_8_CONTENTS="usr/*/gir*/GtkChamplain-0.8.*"
+vala_champlain0_8_CONTENTS="--exclude=*-gtk* usr/share/vala*/vapi/"
+vala_champlain_gtk0_8_CONTENTS="usr/share/vala*/vapi/champlain-gtk-*"
+
+MAKEOPTS+=" vapidir=/usr/share/vala-0.10/vapi"
