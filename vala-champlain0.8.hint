@@ -1,5 +1,5 @@
 category: X11
-requires: libchamplain0.8-devel vala-clutter1.0 vala-memphis0.2
+requires: vala vala-memphis0.2
 external-source: libchamplain0.8
 sdesc: "Clutter-based map display library (Vala bindings)"
 ldesc: "Libchamplain is a C library providing a ClutterActor to display 
