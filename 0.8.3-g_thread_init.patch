@@ -1,0 +1,102 @@
+--- origsrc/libchamplain-0.8.3/demos/animated-marker.c	2011-03-30 16:41:54.000000000 -0500
++++ src/libchamplain-0.8.3/demos/animated-marker.c	2012-12-18 22:26:28.571169900 -0600
+@@ -123,7 +123,6 @@ main (int argc, char *argv[])
+   ChamplainLayer *layer;
+   GpsCallbackData callback_data;
+ 
+-  g_thread_init (NULL);
+   clutter_init (&argc, &argv);
+ 
+   stage = clutter_stage_get_default ();
+--- origsrc/libchamplain-0.8.3/demos/launcher-gtk.c	2011-03-30 16:41:54.000000000 -0500
++++ src/libchamplain-0.8.3/demos/launcher-gtk.c	2012-12-18 22:26:30.552283200 -0600
+@@ -207,7 +207,6 @@ main (int argc,
+   ChamplainView *view;
+   ChamplainLayer *layer;
+ 
+-  g_thread_init (NULL);
+   gtk_clutter_init (&argc, &argv);
+ 
+   /* create the main, top level, window */
+--- origsrc/libchamplain-0.8.3/demos/launcher.c	2011-03-30 16:41:54.000000000 -0500
++++ src/libchamplain-0.8.3/demos/launcher.c	2012-12-18 22:26:32.376387500 -0600
+@@ -93,7 +93,6 @@ main (int argc,
+   ChamplainLayer *layer;
+   gfloat width, total_width = 0;
+ 
+-  g_thread_init (NULL);
+   clutter_init (&argc, &argv);
+ 
+   stage = clutter_stage_get_default ();
+--- origsrc/libchamplain-0.8.3/demos/local-rendering.c	2011-03-30 16:41:54.000000000 -0500
++++ src/libchamplain-0.8.3/demos/local-rendering.c	2012-12-18 22:26:34.383502300 -0600
+@@ -725,7 +725,6 @@ main (int argc,
+ {
+   GtkWidget *widget, *hbox, *bbox, *menubox, *button, *viewport, *label;
+ 
+-  g_thread_init (NULL);
+   gtk_clutter_init (&argc, &argv);
+ 
+   /* create the main, top level, window */
+--- origsrc/libchamplain-0.8.3/demos/minimal-gtk.c	2011-03-18 20:08:05.000000000 -0500
++++ src/libchamplain-0.8.3/demos/minimal-gtk.c	2012-12-18 22:26:40.129831000 -0600
+@@ -29,7 +29,6 @@ main (int argc, char *argv[])
+   GtkWidget *window, *widget;
+ 
+   /* initialize threads and clutter */
+-  g_thread_init (NULL);
+   gtk_clutter_init (&argc, &argv);
+ 
+   /* create the top-level window and quit the main loop when it's closed */
+--- origsrc/libchamplain-0.8.3/demos/minimal.c	2011-03-18 20:08:05.000000000 -0500
++++ src/libchamplain-0.8.3/demos/minimal.c	2012-12-18 22:26:42.876988100 -0600
+@@ -23,7 +23,6 @@ main (int argc, char *argv[])
+ {
+   ClutterActor *actor, *stage;
+ 
+-  g_thread_init (NULL);
+   clutter_init (&argc, &argv);
+ 
+   stage = clutter_stage_get_default ();
+--- origsrc/libchamplain-0.8.3/demos/polygons.c	2011-03-30 16:41:54.000000000 -0500
++++ src/libchamplain-0.8.3/demos/polygons.c	2012-12-18 22:26:45.265124700 -0600
+@@ -74,7 +74,6 @@ main (int argc,
+   ChamplainPolygon *polygon;
+   gfloat width, total_width = 0;;
+ 
+-  g_thread_init (NULL);
+   clutter_init (&argc, &argv);
+ 
+   stage = clutter_stage_get_default ();
+--- origsrc/libchamplain-0.8.3/demos/url-marker.c	2011-03-30 16:41:54.000000000 -0500
++++ src/libchamplain-0.8.3/demos/url-marker.c	2012-12-18 22:26:47.313241900 -0600
+@@ -244,7 +244,6 @@ main (int argc, char *argv[])
+   ChamplainLayer *layer;
+   SoupSession *session;
+ 
+-  g_thread_init (NULL);
+   clutter_init (&argc, &argv);
+ 
+   stage = clutter_stage_get_default ();
+--- origsrc/libchamplain-0.8.3/docs/reference/Makefile.am	2011-03-30 16:41:54.000000000 -0500
++++ src/libchamplain-0.8.3/docs/reference/Makefile.am	2012-12-18 22:12:14.966346500 -0600
+@@ -20,7 +20,7 @@ DOC_MAIN_SGML_FILE=$(DOC_MODULE)-docs.sg
+ DOC_SOURCE_DIR=../../champlain
+ 
+ # Extra options to pass to gtkdoc-scangobj. Not normally needed.
+-SCANGOBJ_OPTIONS=--type-init-func 'g_type_init(); g_thread_init(NULL)'
++#SCANGOBJ_OPTIONS=
+ 
+ # Extra options to supply to gtkdoc-scan.
+ # e.g. SCAN_OPTIONS=--deprecated-guards="GTK_DISABLE_DEPRECATED"
+--- origsrc/libchamplain-0.8.3/docs/reference-gtk/Makefile.am	2011-03-30 16:41:54.000000000 -0500
++++ src/libchamplain-0.8.3/docs/reference-gtk/Makefile.am	2012-12-18 22:16:30.443959000 -0600
+@@ -20,7 +20,7 @@ DOC_MAIN_SGML_FILE=$(DOC_MODULE)-docs.sg
+ DOC_SOURCE_DIR=../../champlain-gtk
+ 
+ # Extra options to pass to gtkdoc-scangobj. Not normally needed.
+-SCANGOBJ_OPTIONS=--type-init-func 'g_type_init(); g_thread_init(NULL)'
++#SCANGOBJ_OPTIONS=
+ 
+ # Extra options to supply to gtkdoc-scan.
+ # e.g. SCAN_OPTIONS=--deprecated-guards="GTK_DISABLE_DEPRECATED"
